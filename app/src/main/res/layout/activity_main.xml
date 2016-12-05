@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="FiboQuick"
+                    android:textColor="@color/colorWhite"
+                    android:textStyle="bold"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/font_xlarge"/>
+
+
+                <Button
+                    android:id="@+id/id_buttonFibonacci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Fibonacci"
+                    android:layout_alignParentRight="true"
+                    android:textAlignment="center"/>
+
+                <Button
+                    android:id="@+id/id_buttonQuicksort"
+                    android:layout_toLeftOf="@id/id_buttonFibonacci"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Quicksort"
+                    android:textAlignment="center"/>
+
+
+
+            </RelativeLayout>
+
+        </android.support.v7.widget.Toolbar>
+
+
+
+
+    //Parent Layout containing Fibonacci view
+    <LinearLayout
+        android:id="@+id/id_LineLay_ParentFibonnaci"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:layout_margin="@dimen/margin_mini">
+
+
+
+        // Layout containing Button and Edittext for input
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+                <EditText
+                    android:id="@+id/id_EdittextNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:background="@android:color/white"
+                    android:hint="Enter number"
+                    android:singleLine="true"/>
+
+                <!--android:textColor="@color/colorWhite"
+                android:textColorHint="@color/colorWhiteOpacity50"-->
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_LinLay_Button"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:padding="2dp">
+
+                <Button
+                    android:id="@+id/id_buttonSubmit"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:text="Submit"/>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        // LinearLayout containing Two Dynamic LinarLayouts for Dimond shape inputs
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:id="@+id/id_LinLay"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/id_LinLayUN0COIN"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+
+
+
+
+    // View related to Quick sort
+
+    <LinearLayout
+        android:id="@+id/id_LinearLay_Quicksort"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginTop="@dimen/margin_large"
+        android:layout_margin="@dimen/margin_mini">
+
+
+
+        // layout containing student name Edittext
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:background="@android:color/darker_gray"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/edittext_padding_twodp"
+            android:paddingBottom="@dimen/edittext_padding_onedp"
+            android:paddingLeft="@dimen/edittext_padding_twodp"
+            android:paddingRight="@dimen/edittext_padding_twodp"
+            >
+
+            <EditText
+                android:id="@+id/id_EdittextStudentName"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/edittext_height"
+                android:background="@android:color/white"
+                android:hint="Student name"
+                android:textColorHint="@color/colorGrey500"
+                android:gravity="center"
+                android:inputType="textCapWords"
+                android:singleLine="true"/>
+
+        </LinearLayout>
+
+
+
+        //Layout containnig Subjectname and score Edittext
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_onedp"
+                android:paddingLeft="@dimen/edittext_padding_twodp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:text="English"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_xlarge"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_onedp"
+                android:paddingLeft="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_twodp">
+
+                <EditText
+                    android:id="@+id/id_editext_English"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:hint="Marks"
+                    android:textColorHint="@color/colorGrey500"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+
+
+        //Layout containnig Subjectname and score Edittext
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal"
+            >
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_onedp"
+                android:paddingLeft="@dimen/edittext_padding_twodp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:gravity="left|center_vertical"
+                    android:text="Math"
+                    android:textSize="@dimen/font_xlarge"
+                    android:textStyle="bold"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_onedp"
+                android:paddingLeft="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_twodp">
+
+                <EditText
+                    android:id="@+id/id_editext_math"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:hint="Marks"
+                    android:textColorHint="@color/colorGrey500"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        //Layout containnig Subjectname and score Edittext
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/edittext_height"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_twodp"
+                android:paddingLeft="@dimen/edittext_padding_twodp">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:text="Science"
+                    android:gravity="left|center_vertical"
+                    android:textSize="@dimen/font_xlarge"
+                    android:textStyle="bold"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:descendantFocusability="beforeDescendants"
+                android:focusableInTouchMode="true"
+                android:background="@android:color/darker_gray"
+                android:layout_height="match_parent"
+                android:paddingTop="@dimen/edittext_padding_onedp"
+                android:paddingBottom="@dimen/edittext_padding_twodp"
+                android:paddingLeft="@dimen/edittext_padding_onedp"
+                android:paddingRight="@dimen/edittext_padding_twodp">
+
+                <EditText
+                    android:id="@+id/id_editext_Science"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"
+                    android:hint="Marks"
+                    android:textColorHint="@color/colorGrey500"
+                    android:gravity="center"
+                    android:singleLine="true"/>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+
+        //Layout Containing SubmitButton
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/darker_gray"
+            android:layout_height="wrap_content"
+            android:padding="2dp">
+
+            <Button
+                android:id="@+id/id_buttonSubmitStudent"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:text="Submit"/>
+
+        </LinearLayout>
+
+         // Layout containing Marks table heading and Recyclerview
+        <LinearLayout
+            android:id="@+id/id_Linrlay_tableRecord"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginTop="60dp">
+            <!--@dimen/margin_large-->
+
+            //Layout containg heading titles
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Rank"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Name"
+                    android:layout_marginLeft="@dimen/headingtext_margleft"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="English"
+                    android:layout_marginLeft="@dimen/headingtext_margleft"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Math"
+                    android:layout_marginLeft="@dimen/headingtext_margleft"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text="Science"
+                    android:layout_marginLeft="@dimen/headingtext_margleft"/>
+
+                <TextView
+                    android:layout_width="1dp"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/darker_gray"
+                    />
+
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:layout_height="wrap_content"
+                    android:text="Total "/>
+
+
+            </LinearLayout><!--Heading titles ending here-->
+
+
+            // view works as a separator line
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/id_RecyclerviewStudent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            // view works as a separator line
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/darker_gray"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginBottom="@dimen/margin_small"
+                />
+
+
+
+
+
+
+        </LinearLayout><!--Layout containing heading Marks and Recyclerview ending here-->
+
+    </LinearLayout> <!--Parent QuickSort ending here-->
+
+
+
+</LinearLayout>

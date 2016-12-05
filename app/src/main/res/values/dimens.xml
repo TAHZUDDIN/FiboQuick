@@ -1,0 +1,42 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="item_height48">48dp</dimen>
+    <dimen name="item_height36">36dp</dimen>
+    <dimen name="item_height40">40dp</dimen>
+
+
+    <!-- Margin values -->
+
+    <dimen name="margin_small">8dp</dimen>
+    <dimen name="margin_mini">4dp</dimen>
+    <dimen name="margin_supermini">2dp</dimen>
+    <dimen name="margin_midsmall">12dp</dimen>
+    <dimen name="margin_medium">16dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <!-- Text Sizes -->
+    <dimen name="font_mini">10sp</dimen>
+    <dimen name="font_small">12sp</dimen>
+    <dimen name="font_medium">14sp</dimen>
+    <dimen name="font_large">16sp</dimen>
+    <dimen name="font_15sp">15sp</dimen>
+    <dimen name="font_xlarge">18sp</dimen>
+    <dimen name="font_xxlarge">20sp</dimen>
+    <dimen name="font_xxxlarge">24sp</dimen>
+    <dimen name="font_xxxxlarge">36sp</dimen>
+    <dimen name="cart_count_size_bg">18dp</dimen>
+    <dimen name="cart_item_count_text">12sp</dimen>
+
+
+
+    <!--activity_main.xml-->
+    <dimen name="edittext_height">40dp</dimen>
+    <dimen name="headingtext_margleft">2dp</dimen>
+    <dimen name="headingseparator_margleft">4dp</dimen>
+    <dimen name="edittext_padding_onedp">1dp</dimen>
+    <dimen name="edittext_padding_twodp">2dp</dimen>
+
+
+
+</resources>
